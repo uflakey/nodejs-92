@@ -11,7 +11,6 @@ console.log("Before");
 
 //   console.log(data.toUpperCase());
 // });
-
 // fs.promises
 //   .readFile("read.txt", { encoding: "utf-8" })
 //   .then((data) => console.log(data.toUpperCase()))
