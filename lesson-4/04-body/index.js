@@ -3,9 +3,13 @@ const express = require("express");
 
 const app = express();
 
-app.use(express.json());
+// app.use(express.json());
 
-app.post("/movies", (req, res) => {
+const jsonParser = express.json();
+
+console.log(jsonParser.toString());
+
+app.post("/movies", jsonParser, (req, res) => {
   const { title, year, genre } = req.body;
 
   res.status(201).send({ id: crypto.randomUUID(), title, year, genre });
